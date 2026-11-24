@@ -9,7 +9,7 @@
   <meta property="og:title" content="Hugo Torres — desenvolvedor full-stack">
   <meta property="og:description" content="Cofundador da Avontz. Next.js, TypeScript, PostgreSQL e Java. Aberto a vagas de desenvolvedor.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://ht-dev04.github.io/hugo.jpg">
+  <meta property="og:image" content="https://ht-dev04.github.io/img/docs.jpg">
   <meta property="og:url" content="https://ht-dev04.github.io/">
   <link rel="canonical" href="https://ht-dev04.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,141 +18,335 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Ícones (traço do Lucide, licença ISC) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-docs" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+      <symbol id="i-pdv" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 7v10"/><path d="M12 7v10"/><path d="M17 7v10"/></symbol>
+      <symbol id="i-crm" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-blocos" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 9v6"/><path d="M16 15v6"/><path d="M16 3v6"/><path d="M3 15h18"/><path d="M3 9h18"/><path d="M8 15v6"/><path d="M8 3v6"/></symbol>
+      <symbol id="i-hortas" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+      <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+      <symbol id="i-studio" viewBox="0 0 24 24"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></symbol>
+      <symbol id="i-love" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+      <symbol id="i-faculdade" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+      <symbol id="i-prefeitura" viewBox="0 0 24 24"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="m12 2 8 5H4Z"/></symbol>
+      <symbol id="i-empresa" viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></symbol>
+      <symbol id="i-codigo" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></symbol>
+      <symbol id="i-seta" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+      <symbol id="i-email" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-whats" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+      <symbol id="i-baixar" viewBox="0 0 24 24"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></symbol>
+    </defs>
+  </svg>
+
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="topo">
-    <a class="assinatura" href="#">Hugo Torres</a>
-    <nav aria-label="Seções">
-      <a href="#trabalho">Trabalho</a>
-      <a href="#avontz">Avontz</a>
-      <a href="#trajetoria">Trajetória</a>
-      <a href="#contato">Contato</a>
-    </nav>
+    <div class="topo-dentro">
+      <a class="assinatura" href="#"><span class="monograma" aria-hidden="true">HT</span>Hugo Torres</a>
+      <nav aria-label="Seções">
+        <a href="#projetos">Projetos</a>
+        <a href="#por-dentro">Por dentro</a>
+        <a href="#historia">História</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
   </header>
 
   <main id="conteudo">
-    <section class="abertura">
-      <p class="meta"><span class="disponivel">Aberto a vagas de desenvolvedor</span> · Ipatinga, MG</p>
-      <h1>Escrevo sistemas de gestão para prefeituras, cartórios e comércio do interior de Minas.</h1>
-      <p class="lead">
-        Sou desenvolvedor full-stack e cofundador da <a href="https://avontz.com.br">Avontz</a>.
-        Trabalho com Next.js, TypeScript e PostgreSQL na web, e com Java e Spring no ponto de venda.
-        Estudo Engenharia de Software na Unileste, com formatura prevista para 2027.
-      </p>
-      <p class="acoes">
-        <a class="botao" href="curriculo-hugo-torres.pdf">Baixar currículo (PDF)</a>
-        <a href="mailto:hugopires300@gmail.com">hugopires300@gmail.com</a>
-      </p>
-
-      <figure class="ritmo">
-        <figcaption>
-          <span>Meus commits por semana nos repositórios da Avontz, nos últimos 12 meses</span>
-          <span class="ritmo-total">871 commits</span>
-        </figcaption>
-        <svg class="ritmo-svg" viewBox="0 0 720 128" role="img" aria-labelledby="ritmo-titulo ritmo-desc">
-        <title id="ritmo-titulo">Commits por semana nos repositórios da Avontz</title>
-        <desc id="ritmo-desc">53 semanas, de 24/11/2025 a 23/11/2026. Total de 871 commits; a semana com mais teve 101.</desc>
-        <line class="eixo" x1="0" y1="104" x2="720" y2="104"/>
-        <rect class="zero" x="2.6" y="103.0" width="8.4" height="1"/>
-        <rect class="zero" x="16.2" y="103.0" width="8.4" height="1"/>
-        <text class="rotulo mes mes-impar" x="13.6" y="122">dez</text>
-        <rect class="barra" x="29.8" y="102.0" width="8.4" height="2.0"><title>Semana de 08/12/2025: 2 commits</title></rect>
-        <rect class="barra" x="43.3" y="101.6" width="8.4" height="2.4"><title>Semana de 15/12/2025: 3 commits</title></rect>
-        <rect class="zero" x="56.9" y="103.0" width="8.4" height="1"/>
-        <rect class="zero" x="70.5" y="103.0" width="8.4" height="1"/>
-        <rect class="zero" x="84.1" y="103.0" width="8.4" height="1"/>
-        <text class="rotulo mes mes-par" x="81.5" y="122">jan ’26</text>
-        <rect class="barra" x="97.7" y="99.1" width="8.4" height="4.9"><title>Semana de 12/01/2026: 6 commits</title></rect>
-        <rect class="barra" x="111.3" y="102.0" width="8.4" height="2.0"><title>Semana de 19/01/2026: 1 commits</title></rect>
-        <rect class="zero" x="124.8" y="103.0" width="8.4" height="1"/>
-        <rect class="zero" x="138.4" y="103.0" width="8.4" height="1"/>
-        <text class="rotulo mes mes-impar" x="135.8" y="122">fev</text>
-        <rect class="zero" x="152.0" y="103.0" width="8.4" height="1"/>
-        <rect class="barra" x="165.6" y="102.0" width="8.4" height="2.0"><title>Semana de 16/02/2026: 2 commits</title></rect>
-        <rect class="zero" x="179.2" y="103.0" width="8.4" height="1"/>
-        <rect class="zero" x="192.8" y="103.0" width="8.4" height="1"/>
-        <text class="rotulo mes mes-par" x="190.2" y="122">mar</text>
-        <rect class="zero" x="206.4" y="103.0" width="8.4" height="1"/>
-        <rect class="zero" x="219.9" y="103.0" width="8.4" height="1"/>
-        <rect class="zero" x="233.5" y="103.0" width="8.4" height="1"/>
-        <rect class="zero" x="247.1" y="103.0" width="8.4" height="1"/>
-        <rect class="zero" x="260.7" y="103.0" width="8.4" height="1"/>
-        <text class="rotulo mes mes-impar" x="258.1" y="122">abr</text>
-        <rect class="zero" x="274.3" y="103.0" width="8.4" height="1"/>
-        <rect class="barra" x="287.9" y="98.3" width="8.4" height="5.7"><title>Semana de 20/04/2026: 7 commits</title></rect>
-        <rect class="barra" x="301.4" y="102.0" width="8.4" height="2.0"><title>Semana de 27/04/2026: 2 commits</title></rect>
-        <rect class="barra" x="315.0" y="102.0" width="8.4" height="2.0"><title>Semana de 04/05/2026: 2 commits</title></rect>
-        <text class="rotulo mes mes-par" x="312.5" y="122">mai</text>
-        <rect class="zero" x="328.6" y="103.0" width="8.4" height="1"/>
-        <rect class="zero" x="342.2" y="103.0" width="8.4" height="1"/>
-        <rect class="barra" x="355.8" y="82.9" width="8.4" height="21.1"><title>Semana de 25/05/2026: 26 commits</title></rect>
-        <rect class="barra" x="369.4" y="84.5" width="8.4" height="19.5"><title>Semana de 01/06/2026: 24 commits</title></rect>
-        <text class="rotulo mes mes-impar" x="366.8" y="122">jun</text>
-        <rect class="barra" x="383.0" y="74.8" width="8.4" height="29.2"><title>Semana de 08/06/2026: 36 commits</title></rect>
-        <rect class="barra" x="396.5" y="80.5" width="8.4" height="23.5"><title>Semana de 15/06/2026: 29 commits</title></rect>
-        <rect class="barra" x="410.1" y="98.3" width="8.4" height="5.7"><title>Semana de 22/06/2026: 7 commits</title></rect>
-        <rect class="barra" x="423.7" y="95.1" width="8.4" height="8.9"><title>Semana de 29/06/2026: 11 commits</title></rect>
-        <rect class="zero" x="437.3" y="103.0" width="8.4" height="1"/>
-        <text class="rotulo mes mes-par" x="434.7" y="122">jul</text>
-        <rect class="barra" x="450.9" y="78.0" width="8.4" height="26.0"><title>Semana de 13/07/2026: 32 commits</title></rect>
-        <rect class="barra" x="464.5" y="98.3" width="8.4" height="5.7"><title>Semana de 20/07/2026: 7 commits</title></rect>
-        <rect class="barra" x="478.1" y="58.5" width="8.4" height="45.5"><title>Semana de 27/07/2026: 56 commits</title></rect>
-        <rect class="barra" x="491.6" y="74.8" width="8.4" height="29.2"><title>Semana de 03/08/2026: 36 commits</title></rect>
-        <text class="rotulo mes mes-impar" x="489.1" y="122">ago</text>
-        <rect class="barra" x="505.2" y="66.7" width="8.4" height="37.3"><title>Semana de 10/08/2026: 46 commits</title></rect>
-        <rect class="barra" x="518.8" y="65.8" width="8.4" height="38.2"><title>Semana de 17/08/2026: 47 commits</title></rect>
-        <rect class="barra" x="532.4" y="45.5" width="8.4" height="58.5"><title>Semana de 24/08/2026: 72 commits</title></rect>
-        <rect class="barra" x="546.0" y="88.6" width="8.4" height="15.4"><title>Semana de 31/08/2026: 19 commits</title></rect>
-        <rect class="barra" x="559.6" y="67.5" width="8.4" height="36.5"><title>Semana de 07/09/2026: 45 commits</title></rect>
-        <text class="rotulo mes mes-par" x="557.0" y="122">set</text>
-        <rect class="barra" x="573.1" y="91.8" width="8.4" height="12.2"><title>Semana de 14/09/2026: 15 commits</title></rect>
-        <rect class="barra" x="586.7" y="86.1" width="8.4" height="17.9"><title>Semana de 21/09/2026: 22 commits</title></rect>
-        <rect class="barra pico" x="600.3" y="22.0" width="8.4" height="82.0"><title>Semana de 28/09/2026: 101 commits</title></rect>
-        <rect class="barra" x="613.9" y="95.9" width="8.4" height="8.1"><title>Semana de 05/10/2026: 10 commits</title></rect>
-        <text class="rotulo mes mes-impar" x="611.3" y="122">out</text>
-        <rect class="barra" x="627.5" y="99.1" width="8.4" height="4.9"><title>Semana de 12/10/2026: 6 commits</title></rect>
-        <rect class="barra" x="641.1" y="56.1" width="8.4" height="47.9"><title>Semana de 19/10/2026: 59 commits</title></rect>
-        <rect class="barra" x="654.7" y="86.1" width="8.4" height="17.9"><title>Semana de 26/10/2026: 22 commits</title></rect>
-        <rect class="barra" x="668.2" y="91.8" width="8.4" height="12.2"><title>Semana de 02/11/2026: 15 commits</title></rect>
-        <text class="rotulo mes mes-par" x="665.7" y="122">nov</text>
-        <rect class="barra" x="681.8" y="50.4" width="8.4" height="53.6"><title>Semana de 09/11/2026: 66 commits</title></rect>
-        <rect class="barra" x="695.4" y="85.3" width="8.4" height="18.7"><title>Semana de 16/11/2026: 23 commits</title></rect>
-        <rect class="barra" x="709.0" y="92.6" width="8.4" height="11.4"><title>Semana de 23/11/2026: 14 commits</title></rect>
-        <text class="rotulo pico-rotulo" x="604.5" y="16" text-anchor="middle">101</text>
-        </svg>
-        <p class="ritmo-nota">Contados no git: commits únicos meus, sem merges, em 13 repositórios. O pico foi a semana de 28 de setembro.</p>
-      </figure>
+    <section class="faixa faixa-quadriculada">
+      <div class="dentro abertura">
+        <div class="abertura-texto">
+          <p class="meta"><span class="disponivel">Aberto a vagas de desenvolvedor</span> · Ipatinga, MG</p>
+          <h1>Escrevo sistemas de gestão para prefeituras, cartórios e comércio do interior de Minas.</h1>
+          <p class="lead">
+            Sou desenvolvedor full-stack e cofundador da <a href="https://avontz.com.br">Avontz</a>.
+            Trabalho com Next.js, TypeScript e PostgreSQL na web, e com Java e Spring no ponto de venda.
+            Estudo Engenharia de Software na Unileste, com formatura prevista para 2027.
+          </p>
+          <p class="acoes">
+            <a class="botao" href="curriculo-hugo-torres.pdf"><svg class="ic"><use href="#i-baixar"/></svg>Baixar currículo</a>
+            <a class="botao botao-linha" href="#projetos">Ver projetos</a>
+          </p>
+        </div>
+        <aside class="cartao-perfil" aria-label="Resumo">
+          <img src="hugo.jpg" width="460" height="460" alt="Hugo Torres, de terno escuro, em frente a uma cortina preta.">
+          <dl>
+            <div><dt>Hoje</dt><dd>Cofundador e COO na Avontz</dd></div>
+            <div><dt>Stack</dt><dd>Next.js · TypeScript · PostgreSQL · Java</dd></div>
+            <div><dt>Em produção</dt><dd>5 produtos, 11 clientes</dd></div>
+          </dl>
+        </aside>
+      </div>
+      <div class="dentro">
+        <figure class="ritmo">
+          <figcaption>
+            <span>Meus commits por semana nos repositórios da Avontz, últimos 12 meses</span>
+            <span class="ritmo-total">871 commits</span>
+          </figcaption>
+          <svg class="ritmo-svg" viewBox="0 0 720 128" role="img" aria-labelledby="ritmo-titulo ritmo-desc">
+          <title id="ritmo-titulo">Commits por semana nos repositórios da Avontz</title>
+          <desc id="ritmo-desc">53 semanas, de 24/11/2025 a 23/11/2026. Total de 871 commits; a semana com mais teve 101.</desc>
+          <line class="eixo" x1="0" y1="104" x2="720" y2="104"/>
+          <rect class="zero" x="2.6" y="103.0" width="8.4" height="1"/>
+          <rect class="zero" x="16.2" y="103.0" width="8.4" height="1"/>
+          <text class="rotulo mes mes-impar" x="13.6" y="122">dez</text>
+          <rect class="barra" x="29.8" y="102.0" width="8.4" height="2.0"><title>Semana de 08/12/2025: 2 commits</title></rect>
+          <rect class="barra" x="43.3" y="101.6" width="8.4" height="2.4"><title>Semana de 15/12/2025: 3 commits</title></rect>
+          <rect class="zero" x="56.9" y="103.0" width="8.4" height="1"/>
+          <rect class="zero" x="70.5" y="103.0" width="8.4" height="1"/>
+          <rect class="zero" x="84.1" y="103.0" width="8.4" height="1"/>
+          <text class="rotulo mes mes-par" x="81.5" y="122">jan ’26</text>
+          <rect class="barra" x="97.7" y="99.1" width="8.4" height="4.9"><title>Semana de 12/01/2026: 6 commits</title></rect>
+          <rect class="barra" x="111.3" y="102.0" width="8.4" height="2.0"><title>Semana de 19/01/2026: 1 commits</title></rect>
+          <rect class="zero" x="124.8" y="103.0" width="8.4" height="1"/>
+          <rect class="zero" x="138.4" y="103.0" width="8.4" height="1"/>
+          <text class="rotulo mes mes-impar" x="135.8" y="122">fev</text>
+          <rect class="zero" x="152.0" y="103.0" width="8.4" height="1"/>
+          <rect class="barra" x="165.6" y="102.0" width="8.4" height="2.0"><title>Semana de 16/02/2026: 2 commits</title></rect>
+          <rect class="zero" x="179.2" y="103.0" width="8.4" height="1"/>
+          <rect class="zero" x="192.8" y="103.0" width="8.4" height="1"/>
+          <text class="rotulo mes mes-par" x="190.2" y="122">mar</text>
+          <rect class="zero" x="206.4" y="103.0" width="8.4" height="1"/>
+          <rect class="zero" x="219.9" y="103.0" width="8.4" height="1"/>
+          <rect class="zero" x="233.5" y="103.0" width="8.4" height="1"/>
+          <rect class="zero" x="247.1" y="103.0" width="8.4" height="1"/>
+          <rect class="zero" x="260.7" y="103.0" width="8.4" height="1"/>
+          <text class="rotulo mes mes-impar" x="258.1" y="122">abr</text>
+          <rect class="zero" x="274.3" y="103.0" width="8.4" height="1"/>
+          <rect class="barra" x="287.9" y="98.3" width="8.4" height="5.7"><title>Semana de 20/04/2026: 7 commits</title></rect>
+          <rect class="barra" x="301.4" y="102.0" width="8.4" height="2.0"><title>Semana de 27/04/2026: 2 commits</title></rect>
+          <rect class="barra" x="315.0" y="102.0" width="8.4" height="2.0"><title>Semana de 04/05/2026: 2 commits</title></rect>
+          <text class="rotulo mes mes-par" x="312.5" y="122">mai</text>
+          <rect class="zero" x="328.6" y="103.0" width="8.4" height="1"/>
+          <rect class="zero" x="342.2" y="103.0" width="8.4" height="1"/>
+          <rect class="barra" x="355.8" y="82.9" width="8.4" height="21.1"><title>Semana de 25/05/2026: 26 commits</title></rect>
+          <rect class="barra" x="369.4" y="84.5" width="8.4" height="19.5"><title>Semana de 01/06/2026: 24 commits</title></rect>
+          <text class="rotulo mes mes-impar" x="366.8" y="122">jun</text>
+          <rect class="barra" x="383.0" y="74.8" width="8.4" height="29.2"><title>Semana de 08/06/2026: 36 commits</title></rect>
+          <rect class="barra" x="396.5" y="80.5" width="8.4" height="23.5"><title>Semana de 15/06/2026: 29 commits</title></rect>
+          <rect class="barra" x="410.1" y="98.3" width="8.4" height="5.7"><title>Semana de 22/06/2026: 7 commits</title></rect>
+          <rect class="barra" x="423.7" y="95.1" width="8.4" height="8.9"><title>Semana de 29/06/2026: 11 commits</title></rect>
+          <rect class="zero" x="437.3" y="103.0" width="8.4" height="1"/>
+          <text class="rotulo mes mes-par" x="434.7" y="122">jul</text>
+          <rect class="barra" x="450.9" y="78.0" width="8.4" height="26.0"><title>Semana de 13/07/2026: 32 commits</title></rect>
+          <rect class="barra" x="464.5" y="98.3" width="8.4" height="5.7"><title>Semana de 20/07/2026: 7 commits</title></rect>
+          <rect class="barra" x="478.1" y="58.5" width="8.4" height="45.5"><title>Semana de 27/07/2026: 56 commits</title></rect>
+          <rect class="barra" x="491.6" y="74.8" width="8.4" height="29.2"><title>Semana de 03/08/2026: 36 commits</title></rect>
+          <text class="rotulo mes mes-impar" x="489.1" y="122">ago</text>
+          <rect class="barra" x="505.2" y="66.7" width="8.4" height="37.3"><title>Semana de 10/08/2026: 46 commits</title></rect>
+          <rect class="barra" x="518.8" y="65.8" width="8.4" height="38.2"><title>Semana de 17/08/2026: 47 commits</title></rect>
+          <rect class="barra" x="532.4" y="45.5" width="8.4" height="58.5"><title>Semana de 24/08/2026: 72 commits</title></rect>
+          <rect class="barra" x="546.0" y="88.6" width="8.4" height="15.4"><title>Semana de 31/08/2026: 19 commits</title></rect>
+          <rect class="barra" x="559.6" y="67.5" width="8.4" height="36.5"><title>Semana de 07/09/2026: 45 commits</title></rect>
+          <text class="rotulo mes mes-par" x="557.0" y="122">set</text>
+          <rect class="barra" x="573.1" y="91.8" width="8.4" height="12.2"><title>Semana de 14/09/2026: 15 commits</title></rect>
+          <rect class="barra" x="586.7" y="86.1" width="8.4" height="17.9"><title>Semana de 21/09/2026: 22 commits</title></rect>
+          <rect class="barra pico" x="600.3" y="22.0" width="8.4" height="82.0"><title>Semana de 28/09/2026: 101 commits</title></rect>
+          <rect class="barra" x="613.9" y="95.9" width="8.4" height="8.1"><title>Semana de 05/10/2026: 10 commits</title></rect>
+          <text class="rotulo mes mes-impar" x="611.3" y="122">out</text>
+          <rect class="barra" x="627.5" y="99.1" width="8.4" height="4.9"><title>Semana de 12/10/2026: 6 commits</title></rect>
+          <rect class="barra" x="641.1" y="56.1" width="8.4" height="47.9"><title>Semana de 19/10/2026: 59 commits</title></rect>
+          <rect class="barra" x="654.7" y="86.1" width="8.4" height="17.9"><title>Semana de 26/10/2026: 22 commits</title></rect>
+          <rect class="barra" x="668.2" y="91.8" width="8.4" height="12.2"><title>Semana de 02/11/2026: 15 commits</title></rect>
+          <text class="rotulo mes mes-par" x="665.7" y="122">nov</text>
+          <rect class="barra" x="681.8" y="50.4" width="8.4" height="53.6"><title>Semana de 09/11/2026: 66 commits</title></rect>
+          <rect class="barra" x="695.4" y="85.3" width="8.4" height="18.7"><title>Semana de 16/11/2026: 23 commits</title></rect>
+          <rect class="barra" x="709.0" y="92.6" width="8.4" height="11.4"><title>Semana de 23/11/2026: 14 commits</title></rect>
+          <text class="rotulo pico-rotulo" x="604.5" y="16" text-anchor="middle">101</text>
+          </svg>
+        </figure>
+      </div>
     </section>
 
-    <section id="trabalho" class="secao" aria-labelledby="t-trabalho">
-      <h2 id="t-trabalho">Trabalho selecionado</h2>
-
-      <article class="caso">
-        <header class="caso-cab">
-          <p class="indice">01</p>
-          <div>
-            <h3>Avontz Docs</h3>
-            <p class="caso-sub">Gestão eletrônica de documentos para o setor público e cartórios</p>
-          </div>
-          <p class="caso-ano">2025 — hoje</p>
-        </header>
-        <div class="caso-corpo">
-          <p>
-            Prefeituras e cartórios guardam processos que precisam provar, anos depois, quem viu e quem mexeu em cada
-            documento. O Avontz Docs é o sistema onde esses documentos entram, recebem assinatura digital e ficam
-            pesquisáveis. Está em produção na Prefeitura de Bugre/MG. Sou o segundo maior contribuidor do código, com
-            cerca de 600 commits.
-          </p>
-          <ul class="decisoes">
-            <li><strong>Auditoria encadeada por hash.</strong> Cada registro guarda o hash do anterior; mexer numa linha antiga quebra a conferência dali para frente. Dá para testar logo abaixo.</li>
-            <li><strong>Assinatura com certificado A1</strong> e permissões por papel com 2FA, porque a regra de quem assina o quê muda de órgão para órgão.</li>
-            <li><strong>Busca no texto dos documentos</strong> com Typesense, e não só no nome do arquivo: é assim que o servidor público procura um processo.</li>
-            <li><strong>Testes de mutação</strong> com Stryker nas regras de permissão, além de Jest e Playwright, para saber se os testes pegam um erro de verdade.</li>
-          </ul>
+    <section id="projetos" class="faixa faixa-areia" aria-labelledby="t-projetos">
+      <div class="dentro">
+        <div class="cab-secao">
+          <h2 id="t-projetos">Projetos</h2>
+          <p>Produtos da Avontz em que trabalho e projetos meus. Cada card leva para o sistema e para a página dele.</p>
         </div>
 
-        <figure class="diagrama" aria-labelledby="d-docs">
-          <figcaption id="d-docs">Arquitetura do Avontz Docs</figcaption>
+        <div class="cards">
+          <article class="card card-grande" style="--marca:#2563eb">
+            <a class="card-tela" href="https://docs.avontz.com.br" tabindex="-1" aria-hidden="true">
+              <span class="barra-url"><span class="cadeado"></span>docs.avontz.com.br</span>
+              <img src="img/docs.jpg" width="1200" height="750" alt="Página do Avontz Docs: modernize a gestão documental pública com segurança jurídica." loading="lazy">
+            </a>
+            <div class="card-corpo">
+              <div class="card-cab">
+                <span class="icone"><svg><use href="#i-docs"/></svg></span>
+                <div><h3>Avontz Docs</h3><p class="card-tipo">Gestão eletrônica de documentos</p></div>
+                <span class="selo ">Em produção</span>
+              </div>
+              <p>Processos, assinatura digital e arquivo para prefeituras e cartórios. Em produção na Prefeitura de Bugre/MG, com auditoria encadeada por hash e busca no texto dos documentos.</p>
+              <p class="papel">Meu papel: 2º maior contribuidor, ~600 commits</p>
+              <ul class="chips"><li>Next.js 16</li><li>PostgreSQL</li><li>Prisma</li><li>Typesense</li><li>Playwright</li></ul>
+              <p class="card-links">
+          <a href="https://docs.avontz.com.br">Landing page <svg class="ic"><use href="#i-seta"/></svg></a>
+          <a href="https://avontz.com.br/produtos/docs">Na Avontz <svg class="ic"><use href="#i-seta"/></svg></a>
+          <a href="#caso-docs">Por dentro ↓</a>
+              </p>
+            </div>
+          </article>
+          <article class="card card-grande" style="--marca:#16a34a">
+            <a class="card-tela" href="https://pdv.avontz.com.br" tabindex="-1" aria-hidden="true">
+              <span class="barra-url"><span class="cadeado"></span>pdv.avontz.com.br</span>
+              <img src="img/pdv.jpg" width="1200" height="750" alt="Página do Avontz PDV: sistema de PDV para mercearias, hortifrútis, agropecuárias e depósitos." loading="lazy">
+            </a>
+            <div class="card-corpo">
+              <div class="card-cab">
+                <span class="icone"><svg><use href="#i-pdv"/></svg></span>
+                <div><h3>Avontz PDV</h3><p class="card-tipo">Frente de caixa com NFC-e</p></div>
+                <span class="selo ">Em produção</span>
+              </div>
+              <p>Caixa para mercearia, hortifrúti, agropecuária e depósito que continua vendendo sem internet. Emite NFC-e, lê balança e controla estoque e fiado.</p>
+              <p class="papel">Meu papel: núcleo fiscal e licenças por segmento, ~76 commits</p>
+              <ul class="chips"><li>Java 21</li><li>Spring Boot</li><li>SQLite</li><li>React</li><li>Tauri</li></ul>
+              <p class="card-links">
+          <a href="https://pdv.avontz.com.br">Landing page <svg class="ic"><use href="#i-seta"/></svg></a>
+          <a href="https://avontz.com.br/produtos/pdv">Na Avontz <svg class="ic"><use href="#i-seta"/></svg></a>
+          <a href="#caso-pdv">Por dentro ↓</a>
+              </p>
+            </div>
+          </article>
+          <article class="card" style="--marca:#1d4ed8">
+            <a class="card-tela" href="https://crm.avontz.com.br" tabindex="-1" aria-hidden="true">
+              <span class="barra-url"><span class="cadeado"></span>crm.avontz.com.br</span>
+              <img src="img/crm.jpg" width="1200" height="750" alt="Página do Avontz CRM: o sistema operacional da sua agência digital." loading="lazy">
+            </a>
+            <div class="card-corpo">
+              <div class="card-cab">
+                <span class="icone"><svg><use href="#i-crm"/></svg></span>
+                <div><h3>Avontz CRM</h3><p class="card-tipo">Gestão para agências digitais</p></div>
+                
+              </div>
+              <p>Comercial, projetos, financeiro e portal do cliente. Fiz a conciliação de extratos Asaas, Efí e Sicoob, o DRE e a cobrança com NFS-e.</p>
+              <p class="papel">Meu papel: financeiro e conciliação, 127 commits</p>
+              <ul class="chips"><li>Next.js</li><li>Prisma</li><li>Better-Auth</li><li>Vitest</li></ul>
+              <p class="card-links">
+          <a href="https://crm.avontz.com.br">Landing page <svg class="ic"><use href="#i-seta"/></svg></a>
+          <a href="https://avontz.com.br/produtos/crm">Na Avontz <svg class="ic"><use href="#i-seta"/></svg></a>
+              </p>
+            </div>
+          </article>
+          <article class="card" style="--marca:#d97706">
+            <a class="card-tela" href="https://blocos.avontz.com.br" tabindex="-1" aria-hidden="true">
+              <span class="barra-url"><span class="cadeado"></span>blocos.avontz.com.br</span>
+              <img src="img/blocos.jpg" width="1200" height="750" alt="Página do Avontz Blocos: do traço ao palete, cada bloco sob controle." loading="lazy">
+            </a>
+            <div class="card-corpo">
+              <div class="card-cab">
+                <span class="icone"><svg><use href="#i-blocos"/></svg></span>
+                <div><h3>Avontz Blocos</h3><p class="card-tipo">Gestão de fábrica de blocos</p></div>
+                
+              </div>
+              <p>Estoque de insumos, traços, produção, perdas e financeiro de uma fábrica de blocos de concreto.</p>
+              <p class="papel">Meu papel: maior contribuidor do código</p>
+              <ul class="chips"><li>Next.js 15</li><li>Prisma</li><li>Auth.js</li><li>Playwright</li></ul>
+              <p class="card-links">
+          <a href="https://blocos.avontz.com.br">Landing page <svg class="ic"><use href="#i-seta"/></svg></a>
+          <a href="https://avontz.com.br/produtos/blocos">Na Avontz <svg class="ic"><use href="#i-seta"/></svg></a>
+              </p>
+            </div>
+          </article>
+          <article class="card" style="--marca:#15803d">
+            <a class="card-tela" href="https://hortas.avontz.com.br" tabindex="-1" aria-hidden="true">
+              <span class="barra-url"><span class="cadeado"></span>hortas.avontz.com.br</span>
+              <img src="img/hortas.jpg" width="1200" height="750" alt="Página do Avontz Hortas: da colheita ao acerto, tudo no controle." loading="lazy">
+            </a>
+            <div class="card-corpo">
+              <div class="card-cab">
+                <span class="icone"><svg><use href="#i-hortas"/></svg></span>
+                <div><h3>Avontz Hortas</h3><p class="card-tipo">Financeiro de produtores de hortifrúti</p></div>
+                
+              </div>
+              <p>Cargas, vendas, despesas e o acerto com o comprador, com o PDF pronto para mandar no WhatsApp.</p>
+              <p class="papel">Produto da Avontz · contribuições pontuais</p>
+              <ul class="chips"><li>Next.js</li><li>Prisma</li><li>PostgreSQL</li></ul>
+              <p class="card-links">
+          <a href="https://hortas.avontz.com.br">Landing page <svg class="ic"><use href="#i-seta"/></svg></a>
+          <a href="https://avontz.com.br/produtos/hortas">Na Avontz <svg class="ic"><use href="#i-seta"/></svg></a>
+              </p>
+            </div>
+          </article>
+          <article class="card" style="--marca:#b91c1c">
+            <a class="card-tela" href="https://bravura.avontz.com.br" tabindex="-1" aria-hidden="true">
+              <span class="barra-url"><span class="cadeado"></span>bravura.avontz.com.br</span>
+              <img src="img/bravura.jpg" width="1200" height="750" alt="Site do Bravura Esporte Clube, com o escudo do time e os últimos jogos." loading="lazy">
+            </a>
+            <div class="card-corpo">
+              <div class="card-cab">
+                <span class="icone"><svg><use href="#i-escudo"/></svg></span>
+                <div><h3>Bravura EC</h3><p class="card-tipo">Site, loja e painel de um time amador</p></div>
+                <span class="selo selo-aberto">Código aberto</span>
+              </div>
+              <p>Projeto meu do começo ao fim: site público, loja de uniformes e o painel em que a diretoria atualiza jogos, elenco e produtos.</p>
+              <p class="papel">Meu papel: autor</p>
+              <ul class="chips"><li>Next.js 16</li><li>Prisma</li><li>Supabase</li><li>Tailwind</li></ul>
+              <p class="card-links">
+          <a href="https://bravura.avontz.com.br">Ver o site <svg class="ic"><use href="#i-seta"/></svg></a>
+          <a href="https://github.com/HT-dev04/Bravura-EC">Código no GitHub <svg class="ic"><use href="#i-seta"/></svg></a>
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="sub-secao">Também fiz</h3>
+        <div class="mini-cards">
+          <article class="mini">
+            <span class="icone"><svg><use href="#i-studio"/></svg></span>
+            <div>
+              <h4>Avontz Studio</h4>
+              <p>Agenda e publica vídeos no YouTube, Instagram e TikTok pelas APIs oficiais, com os tokens cifrados em AES-256-GCM.</p>
+              <p class="mini-stack">Node 22 · SQLite</p>
+            </div>
+          </article>
+          <article class="mini">
+            <span class="icone"><svg><use href="#i-love"/></svg></span>
+            <div>
+              <h4>Avontz Love</h4>
+              <p>Confirmação de presença e lista de presentes paga para casamentos, com pagamento pelo Mercado Pago.</p>
+              <p class="mini-stack">Next.js · Supabase · Mercado Pago</p>
+            </div>
+          </article>
+          <article class="mini">
+            <span class="icone"><svg><use href="#i-faculdade"/></svg></span>
+            <div>
+              <h4><a href="https://github.com/HT-dev04/delivery-padroes-projeto">delivery-padroes</a></h4>
+              <p>Trabalho de Padrões de Projeto na Unileste: Factory Method e Abstract Factory num sistema de entregas, com UML.</p>
+              <p class="mini-stack">Java 17 · PlantUML</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="por-dentro" class="faixa" aria-labelledby="t-por-dentro">
+      <div class="dentro">
+        <div class="cab-secao">
+          <h2 id="t-por-dentro">Por dentro</h2>
+          <p>Como dois desses sistemas são feitos, e uma das técnicas que uso, para você testar.</p>
+        </div>
+
+        <article id="caso-docs" class="caso">
+          <header class="caso-cab">
+            <span class="icone" style="--marca:#2563eb"><svg><use href="#i-docs"/></svg></span>
+            <div>
+              <h3>Avontz Docs</h3>
+              <p class="caso-sub">Prefeituras e cartórios precisam provar, anos depois, quem viu e quem mexeu em cada documento.</p>
+            </div>
+          </header>
+          <ul class="decisoes">
+            <li><strong>Auditoria encadeada por hash.</strong> Cada registro guarda o hash do anterior; mexer numa linha antiga quebra a conferência dali para frente.</li>
+            <li><strong>Assinatura com certificado A1</strong> e permissões por papel com 2FA, porque a regra de quem assina o quê muda de órgão para órgão.</li>
+            <li><strong>Busca no texto dos documentos</strong> com Typesense, e não só no nome do arquivo: é assim que o servidor público procura um processo.</li>
+            <li><strong>Testes de mutação</strong> com Stryker nas regras de permissão, além de Jest e Playwright.</li>
+          </ul>
+          <figure class="diagrama" aria-labelledby="d-docs">
+          <figcaption id="d-docs">Arquitetura</figcaption>
           <div class="diagrama-rolagem">
             <svg viewBox="0 0 760 250" role="img" aria-label="O navegador fala com o Next.js, que usa o Prisma para o PostgreSQL com pgvector; o Next.js também usa o Typesense para busca, o Redis e o S3 para os arquivos. O log de auditoria fica no PostgreSQL, encadeado por hash.">
               <defs>
@@ -177,7 +371,7 @@
 
         <section class="demo" aria-labelledby="t-demo">
           <div class="demo-cab">
-            <h4 id="t-demo">Experimente: altere um registro antigo do log</h4>
+            <h4 id="t-demo"><svg class="ic"><use href="#i-codigo"/></svg> Experimente: altere um registro antigo do log</h4>
             <button type="button" class="demo-restaurar" hidden>Restaurar</button>
           </div>
           <p class="demo-explica">
@@ -196,38 +390,23 @@
           <p class="demo-estado" role="status" aria-live="polite">Calculando a cadeia…</p>
           <noscript><p class="nota">A demonstração precisa de JavaScript.</p></noscript>
         </section>
+        </article>
 
-        <div class="caso-corpo">
-          <p class="stack">Next.js 16 · React 19 · Prisma · PostgreSQL · Typesense · Redis · S3 · Turborepo · GitHub Actions</p>
-          <p class="links"><a href="https://docs.avontz.com.br">docs.avontz.com.br</a></p>
-          <p class="nota">Código privado. Mostro telas e trechos numa entrevista.</p>
-        </div>
-      </article>
-
-      <article class="caso">
-        <header class="caso-cab">
-          <p class="indice">02</p>
-          <div>
-            <h3>Avontz PDV</h3>
-            <p class="caso-sub">Frente de caixa com NFC-e para varejo e agro</p>
-          </div>
-          <p class="caso-ano">2026</p>
-        </header>
-        <div class="caso-corpo">
-          <p>
-            Um caixa precisa vender quando a internet cai. Por isso o PDV roda local, com o banco no próprio computador.
-            O núcleo fiscal é em Java e Spring Boot, com a biblioteca <span class="sem-quebra">java-nfe</span>, e a
-            interface é React empacotada com Tauri. O mesmo código atende mercearia, padaria, agro, material de
-            construção e vitrine, liberando as telas por licença.
-          </p>
+        <article id="caso-pdv" class="caso">
+          <header class="caso-cab">
+            <span class="icone" style="--marca:#16a34a"><svg><use href="#i-pdv"/></svg></span>
+            <div>
+              <h3>Avontz PDV</h3>
+              <p class="caso-sub">Um caixa precisa vender quando a internet cai.</p>
+            </div>
+          </header>
           <ul class="decisoes">
-            <li><strong>Emissão de NFC-e</strong> direto do caixa e leitura de balança.</li>
-            <li><strong>Licença por segmento</strong> num só código, com as telas que cada segmento usa.</li>
-            <li><strong>Migração de dados</strong> do sistema antigo do cliente e contagem de estoque.</li>
+            <li><strong>Tudo local.</strong> O banco fica no computador do caixa (SQLite) e a nota vai para a SEFAZ quando há conexão.</li>
+            <li><strong>Núcleo fiscal em Java 21 e Spring Boot</strong>, com a biblioteca <span class="sem-quebra">java-nfe</span>, e a interface em React empacotada com Tauri.</li>
+            <li><strong>Licença por segmento:</strong> mercearia, padaria, agro, material de construção e vitrine no mesmo código, cada um com as telas que usa.</li>
           </ul>
-        </div>
-        <figure class="diagrama" aria-labelledby="d-pdv">
-          <figcaption id="d-pdv">Arquitetura do Avontz PDV</figcaption>
+          <figure class="diagrama" aria-labelledby="d-pdv">
+          <figcaption id="d-pdv">Arquitetura</figcaption>
           <div class="diagrama-rolagem">
             <svg viewBox="0 0 760 170" role="img" aria-label="No computador do caixa, a interface em React e Tauri conversa com o núcleo fiscal em Java 21 e Spring Boot, que grava no SQLite local e lê a balança. O núcleo emite a NFC-e na SEFAZ.">
               <rect class="moldura" x="6" y="6" width="560" height="158"/>
@@ -244,185 +423,90 @@
             </svg>
           </div>
         </figure>
-        <div class="caso-corpo">
-          <p class="stack">Java 21 · Spring Boot · SQLite · React · Vite · Tauri</p>
-          <p class="links"><a href="https://pdv.avontz.com.br">pdv.avontz.com.br</a></p>
-        </div>
-      </article>
-
-      <article class="caso">
-        <header class="caso-cab">
-          <p class="indice">03</p>
-          <div>
-            <h3>Avontz CRM</h3>
-            <p class="caso-sub">Financeiro e relacionamento com o cliente</p>
-          </div>
-          <p class="caso-ano">2025 — hoje</p>
-        </header>
-        <div class="caso-corpo">
-          <p>
-            O sistema que a Avontz usa e vende: cobrança, conciliação e conversa com o cliente no mesmo lugar. A parte
-            que mais exigiu cuidado foi a conciliação, porque cada banco manda o extrato num formato.
-          </p>
-          <ul class="decisoes">
-            <li><strong>Conciliação de extratos</strong> de Asaas, Efí e Sicoob numa mesma tela, com o DRE do mês saindo dela.</li>
-            <li><strong>Cobrança automática e emissão de NFS-e</strong> a partir do contrato, sem digitar de novo.</li>
-            <li><strong>Central de conversas</strong> no formato do WhatsApp, ligada ao cadastro do cliente.</li>
-          </ul>
-          <p class="stack">Next.js · Prisma · PostgreSQL · Better-Auth · Vitest · Playwright</p>
-          <p class="links"><a href="https://crm.avontz.com.br">crm.avontz.com.br</a></p>
-        </div>
-      </article>
-
-      <article class="caso">
-        <header class="caso-cab">
-          <p class="indice">04</p>
-          <div>
-            <h3>Bravura EC</h3>
-            <p class="caso-sub">Site e loja de um time amador · código aberto</p>
-          </div>
-          <p class="caso-ano">2025</p>
-        </header>
-        <div class="caso-corpo">
-          <p>
-            Projeto meu, do começo ao fim: o site público do time, uma loja de uniformes e o painel em que a diretoria
-            atualiza jogos, elenco e produtos sem precisar de mim.
-          </p>
-          <p class="stack">Next.js 16 · Prisma · Supabase · Tailwind</p>
-          <p class="links">
-            <a href="https://bravura-ec.vercel.app">Ver o site</a>
-            <a href="https://github.com/HT-dev04/Bravura-EC">Código no GitHub</a>
-          </p>
-        </div>
-      </article>
-
-      <h3 class="sub-secao">Outros projetos</h3>
-      <table class="tabela">
-        <thead>
-          <tr><th scope="col">Projeto</th><th scope="col">O que é</th><th scope="col">Stack</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Avontz Studio</td><td>Agenda e publica vídeos no YouTube, Instagram e TikTok pelas APIs oficiais, com os tokens cifrados em AES-256-GCM.</td><td>Node 22, SQLite</td></tr>
-          <tr><td>Avontz Love</td><td>Confirmação de presença e lista de presentes paga para casamentos.</td><td>Next.js, Supabase, Mercado Pago</td></tr>
-          <tr><td><a href="https://github.com/HT-dev04/delivery-padroes-projeto">delivery-padroes</a></td><td>Trabalho de Padrões de Projeto na Unileste: Factory Method e Abstract Factory num sistema de entregas, com UML.</td><td>Java 17, PlantUML</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section id="avontz" class="secao" aria-labelledby="t-avontz">
-      <h2 id="t-avontz">A Avontz</h2>
-      <div class="avontz-grade">
-        <div class="avontz-texto">
-          <p class="destaque">
-            Empresa de software que abri com o Alefe em 2025, em Minas Gerais. Ele é o CEO; eu sou o COO e programo
-            junto. Atendemos 11 clientes, entre prefeitura, cartórios, varejo, indústria e produtores rurais.
-          </p>
-          <p>
-            Na Prefeitura de Bugre, além do Avontz Docs, fizemos a digitalização do acervo: escanear, indexar e deixar
-            pesquisável o papel que estava em caixas. Também fazemos sistemas sob medida, chatbots com IA no WhatsApp
-            Business, automações de processo e landing pages.
-          </p>
-        </div>
-        <table class="tabela produtos">
-          <caption>Produtos em operação</caption>
-          <tbody>
-            <tr><td>Avontz Docs</td><td>Gestão eletrônica de documentos</td><td><a href="https://docs.avontz.com.br">docs.avontz.com.br</a></td></tr>
-            <tr><td>Avontz PDV</td><td>Frente de caixa com NFC-e</td><td><a href="https://pdv.avontz.com.br">pdv.avontz.com.br</a></td></tr>
-            <tr><td>Avontz CRM</td><td>Clientes, cobrança e conciliação</td><td><a href="https://crm.avontz.com.br">crm.avontz.com.br</a></td></tr>
-            <tr><td>Avontz Blocos</td><td>Produção, estoque e financeiro de fábrica de blocos</td><td><a href="https://blocos.avontz.com.br">blocos.avontz.com.br</a></td></tr>
-            <tr><td>Avontz Hortas</td><td>Financeiro de produtores de hortifrúti</td><td><a href="https://hortas.avontz.com.br">hortas.avontz.com.br</a></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <dl class="numeros">
-        <div><dt>clientes</dt><dd>11</dd></div>
-        <div><dt>produtos próprios em operação</dt><dd>5</dd></div>
-        <div><dt>commits meus nos repositórios</dt><dd>871</dd></div>
-      </dl>
-    </section>
-
-    <section id="trajetoria" class="secao" aria-labelledby="t-trajetoria">
-      <h2 id="t-trajetoria">Trajetória</h2>
-      <ol class="linha">
-        <li>
-          <p class="quando">2025 — hoje</p>
-          <div>
-            <h3>Cofundador e COO · Avontz Soluções Tecnológicas</h3>
-            <p>Levanto requisitos com os clientes, programo, testo e coloco em produção. Também cuido de segurança e da documentação de LGPD dos produtos.</p>
-          </div>
-        </li>
-        <li>
-          <p class="quando">2024 — hoje</p>
-          <div>
-            <h3>Gestão de contratos · Prefeitura Municipal de Bugre</h3>
-            <p>Acompanho contratos, aditivos, ordens de fornecimento e atas de registro de preço. É daqui que vem o que eu sei sobre como um processo público anda, e isso entra direto nos requisitos do Avontz Docs.</p>
-          </div>
-        </li>
-        <li>
-          <p class="quando">2024 — 2027</p>
-          <div>
-            <h3>Engenharia de Software · Unileste</h3>
-            <p>Bacharelado, hoje no 6º período. Padrões de projeto, Scrum e XP, UML e programação orientada a objetos em Java.</p>
-          </div>
-        </li>
-      </ol>
-
-      <h3 class="sub-secao">Ferramentas que uso todo dia</h3>
-      <dl class="ferramentas">
-        <div><dt>Linguagens</dt><dd>TypeScript, JavaScript, Java, SQL</dd></div>
-        <div><dt>Web</dt><dd>Next.js, React, Tailwind, Server Actions</dd></div>
-        <div><dt>Dados</dt><dd>PostgreSQL, Prisma, Redis, Typesense, SQLite</dd></div>
-        <div><dt>Qualidade</dt><dd>Vitest, Jest, Playwright, Stryker</dd></div>
-        <div><dt>Entrega</dt><dd>Docker, GitHub Actions, Coolify, Vercel, Linux</dd></div>
-        <div><dt>Integrações</dt><dd>Asaas, Efí, Sicoob, Mercado Pago, NFC-e, NFS-e, WhatsApp</dd></div>
-      </dl>
-
-      <h3 class="sub-secao">Cursos</h3>
-      <ul class="cursos">
-        <li>Pulsar Jovem pelo Rio Doce — formação e ciclo III <span>420 h · 2024–2025</span></li>
-        <li>Algoritmo — Curso em Vídeo <span>40 h · 2024</span></li>
-        <li>Nova Lei de Licitações: ETP e TR <span>16 h · 2024</span></li>
-        <li>Despertando para o Lean — Sebrae <span>3 h · 2023</span></li>
-        <li>Inglês intermediário inicial <span>2024</span></li>
-      </ul>
-    </section>
-
-    <section id="sobre" class="secao sobre" aria-labelledby="t-sobre">
-      <h2 id="t-sobre">Sobre</h2>
-      <div class="sobre-grade">
-        <figure>
-          <img src="hugo.jpg" width="460" height="460" alt="Hugo Torres, de terno escuro, em frente a uma cortina preta.">
-        </figure>
-        <div class="sobre-texto">
-          <p>
-            Trabalho na prefeitura de Bugre e, em paralelo, toco a Avontz com meu sócio. Quase tudo o que escrevo vai
-            para produção, com cliente usando e ligando quando algo quebra.
-          </p>
-          <p>
-            Gosto da parte que faz o sistema ser confiável: permissão, auditoria, conciliação bancária, nota fiscal.
-            Uso agentes de IA no dia a dia, sempre com teste e revisão antes de ir para produção. Procuro uma vaga de
-            desenvolvedor num time mais experiente que o meu.
-          </p>
-        </div>
+        </article>
       </div>
     </section>
 
-    <section id="contato" class="secao contato" aria-labelledby="t-contato">
-      <h2 id="t-contato">Contato</h2>
-      <p class="contato-frase">Por e-mail ou WhatsApp, como preferir.</p>
-      <p class="contato-email"><a href="mailto:hugopires300@gmail.com">hugopires300@gmail.com</a></p>
-      <ul class="contato-links">
-        <li><a href="https://wa.me/5533984317880">WhatsApp (33) 98431-7880</a></li>
-        <li><a href="https://www.linkedin.com/in/hugo-torres04">LinkedIn</a></li>
-        <li><a href="https://github.com/HT-dev04">GitHub</a></li>
-        <li><a href="curriculo-hugo-torres.pdf">Currículo (PDF)</a></li>
-      </ul>
+    <section id="historia" class="faixa faixa-tinta" aria-labelledby="t-historia">
+      <div class="dentro">
+        <div class="cab-secao">
+          <h2 id="t-historia">História</h2>
+          <p>Da prefeitura para o código, um ano de cada vez.</p>
+        </div>
+        <ol class="historia">
+          <li>
+            <p class="ano">2024</p>
+            <div class="marcos">
+              <div class="marco"><span class="icone"><svg><use href="#i-prefeitura"/></svg></span><div><h3>Entro na Prefeitura de Bugre</h3><p>Gestão de contratos, aditivos, ordens de fornecimento e atas de registro de preço. É onde aprendo como um processo público anda no papel.</p></div></div>
+              <div class="marco"><span class="icone"><svg><use href="#i-faculdade"/></svg></span><div><h3>Começo Engenharia de Software na Unileste</h3><p>Em paralelo, o curso de Algoritmo do Curso em Vídeo e o programa Pulsar Jovem pelo Rio Doce. Em novembro subo meus primeiros repositórios: exercícios em Visualg, HTML e CSS e um sistema financeiro em Java feito em grupo.</p></div></div>
+            </div>
+          </li>
+          <li>
+            <p class="ano">2025</p>
+            <div class="marcos">
+              <div class="marco"><span class="icone"><svg><use href="#i-empresa"/></svg></span><div><h3>Abro a Avontz com o Alefe</h3><p>Em maio publico a primeira landing page da empresa. Em dezembro faço meu primeiro commit no Avontz Docs, que viria a ser o produto principal.</p></div></div>
+            </div>
+          </li>
+          <li>
+            <p class="ano">2026</p>
+            <div class="marcos">
+              <div class="marco"><span class="icone"><svg><use href="#i-docs"/></svg></span><div><h3>O Avontz Docs entra em produção</h3><p>Na Prefeitura de Bugre, junto com a digitalização do acervo. De maio em diante programo toda semana: 871 commits em 12 meses, entre Docs, CRM, Blocos e PDV.</p></div></div>
+              <div class="marco"><span class="icone"><svg><use href="#i-pdv"/></svg></span><div><h3>Do web para o caixa</h3><p>Em outubro entro no PDV, em Java e Spring Boot, com NFC-e e funcionamento sem internet. No meio do ano faço o Bravura EC e, na faculdade, o trabalho de padrões de projeto.</p></div></div>
+            </div>
+          </li>
+          <li class="futuro">
+            <p class="ano">2027</p>
+            <div class="marcos">
+              <div class="marco"><span class="icone"><svg><use href="#i-faculdade"/></svg></span><div><h3>Formatura prevista</h3><p>Bacharel em Engenharia de Software. Até lá, quero estar num time de desenvolvimento mais experiente que o meu.</p></div></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="avontz" class="faixa" aria-labelledby="t-avontz">
+      <div class="dentro avontz">
+        <div class="cab-secao">
+          <h2 id="t-avontz">A Avontz</h2>
+          <p class="destaque">Empresa de software de Minas Gerais. O Alefe é o CEO; eu sou o COO e programo junto. Atendemos 11 clientes, entre prefeitura, cartórios, varejo, indústria e produtores rurais.</p>
+        </div>
+        <dl class="numeros">
+          <div><dt>clientes</dt><dd>11</dd></div>
+          <div><dt>produtos próprios em operação</dt><dd>5</dd></div>
+          <div><dt>commits meus em 12 meses</dt><dd>871</dd></div>
+        </dl>
+        <ul class="servicos">
+          <li>Sistemas sob medida para gestão pública e empresas</li>
+          <li>Chatbots com IA no WhatsApp Business</li>
+          <li>Automação de processos e integrações</li>
+          <li>Digitalização de acervos do setor público</li>
+          <li>Landing pages</li>
+          <li>Manutenção evolutiva e suporte</li>
+        </ul>
+        <p class="card-links"><a href="https://avontz.com.br">avontz.com.br <svg class="ic"><use href="#i-seta"/></svg></a></p>
+      </div>
+    </section>
+
+    <section id="contato" class="faixa faixa-areia" aria-labelledby="t-contato">
+      <div class="dentro contato">
+        <h2 id="t-contato">Vamos conversar?</h2>
+        <p class="contato-frase">Estou procurando vaga de desenvolvedor. E-mail ou WhatsApp, como preferir.</p>
+        <ul class="contato-lista">
+          <li><a href="mailto:hugopires300@gmail.com"><svg class="ic"><use href="#i-email"/></svg>hugopires300@gmail.com</a></li>
+          <li><a href="https://wa.me/5533984317880"><svg class="ic"><use href="#i-whats"/></svg>(33) 98431-7880</a></li>
+          <li><a href="https://www.linkedin.com/in/hugo-torres04"><svg class="ic"><use href="#i-linkedin"/></svg>linkedin.com/in/hugo-torres04</a></li>
+          <li><a href="https://github.com/HT-dev04"><svg class="ic"><use href="#i-github"/></svg>github.com/HT-dev04</a></li>
+        </ul>
+        <p><a class="botao" href="curriculo-hugo-torres.pdf"><svg class="ic"><use href="#i-baixar"/></svg>Baixar currículo</a></p>
+      </div>
     </section>
   </main>
 
   <footer class="rodape">
-    <p>Hugo Pires de Almeida Torres · Ipatinga, MG</p>
-    <p>HTML, CSS e um pouco de JavaScript, sem framework. Newsreader, Hanken Grotesk e IBM Plex Mono.</p>
+    <div class="dentro">
+      <p>Hugo Pires de Almeida Torres · Ipatinga, MG</p>
+      <p>HTML, CSS e um pouco de JavaScript, sem framework. As imagens são capturas reais das páginas dos produtos.</p>
+    </div>
   </footer>
 
   <script src="auditoria.js" defer></script>
